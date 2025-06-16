@@ -13,11 +13,9 @@ for (i = 1; i <= 256; i++) {
 let selectDiv = document.querySelectorAll(".square");
 
 selectDiv.forEach(div => {
-    addEventListener("mouseover", colorDiv);
+    div.addEventListener("mouseover", colorDiv);
 });
 
-
-
-function colorDiv() {
-    console.log("test");
+function colorDiv(div) {
+    div.target.style.backgroundColor = "gray";
 }
