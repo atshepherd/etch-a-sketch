@@ -9,3 +9,15 @@ for (i = 1; i <= 256; i++) {
     newDiv.setAttribute("class", "square");
     divContainer.appendChild(newDiv);
 }
+
+let selectDiv = document.querySelectorAll(".square");
+
+selectDiv.forEach(div => {
+    addEventListener("mouseover", colorDiv);
+});
+
+
+
+function colorDiv() {
+    console.log("test");
+}
