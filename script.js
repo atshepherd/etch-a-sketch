@@ -23,6 +23,11 @@ function colorDiv(div) {
 let clearButton = document.querySelector(".button");
 
 clearButton.addEventListener("click", () => {
-    let input = prompt("How many squares per side do you want on your new grid?");
+    let input; 
+    do {
+        input = prompt("How many squares per side do you want on your new grid?");
+    }
+    while (input > 100)
+
     console.log(input);
 });
