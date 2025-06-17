@@ -19,3 +19,10 @@ selectDiv.forEach(div => {
 function colorDiv(div) {
     div.target.style.backgroundColor = "gray";
 }
+
+let clearButton = document.querySelector(".button");
+
+clearButton.addEventListener("click", () => {
+    let input = prompt("How many squares per side do you want on your new grid?");
+    console.log(input);
+});
