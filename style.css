@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Roboto;
 }
 
 body {
@@ -9,6 +10,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
+    background-color: black;
+    
 }
 
 .container {
@@ -16,6 +20,7 @@ body {
     flex-wrap: wrap;
     width: 800px;
     height: 800px;
+    background-color: white;
 }
 
 .square {
@@ -25,4 +30,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+button {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: 2px solid rgb(49, 49, 65);
+    background-color: rgb(172, 172, 233);
+}
+
+button:hover {
+    background-color: rgb(125, 125, 167);
 }
