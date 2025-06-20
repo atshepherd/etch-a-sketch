@@ -28,10 +28,11 @@ function colorGrid() {
 }
 
 function getNewGridInput() {
-    do {
-        input = prompt("How many squares per side do you want on your new grid?");
+    input = prompt("How many squares per side do you want on your new grid?");
+
+    while (input > 100 || input < 1) {
+        input = prompt("Please enter a number between 1 and 100:");
     }
-    while (input > 100)
 }
 
 let input = 256;
