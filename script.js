@@ -1,29 +1,54 @@
-let divContainer = document.querySelector(".container");
+function createGrid() {
+    let divContainer = document.querySelector(".container");
 
-for (i = 1; i <= 256; i++) {
-    let newDiv = document.createElement("div");
-    newDiv.setAttribute("class", "square");
-    divContainer.appendChild(newDiv);
+    for (i = 1; i <= input; i++) {
+     let newDiv = document.createElement("div");
+     newDiv.setAttribute("class", "square");
+     divContainer.appendChild(newDiv);
+    }
 }
 
-let selectDiv = document.querySelectorAll(".square");
+function clearGrid() {
+    let allSquares = document.getElementsByClassName('square');
+    let gridtoClear = Array.from(allSquares);
+    gridtoClear.forEach((square) => square.remove());
+}
 
-selectDiv.forEach(div => {
+function colorGrid() {
+    let selectDiv = document.querySelectorAll(".square");
+
+    selectDiv.forEach(div => {
     div.addEventListener("mouseover", colorDiv);
-});
+    });
 
-function colorDiv(div) {
+    function colorDiv(div) {
     div.target.style.backgroundColor = "gray";
+    }
+
 }
 
-let clearButton = document.querySelector(".button");
-
-clearButton.addEventListener("click", () => {
-    let input; 
+function getNewGridInput() {
     do {
         input = prompt("How many squares per side do you want on your new grid?");
     }
     while (input > 100)
+}
 
-    console.log(input);
+let input = 256;
+
+createGrid();
+
+colorGrid();
+
+let clearButton = document.querySelector(".button");
+
+clearButton.addEventListener("click", () => {
+    
+    getNewGridInput();
+
+    clearGrid();
+
+    createGrid();
+
+    colorGrid();
 });
