@@ -42,18 +42,13 @@ function getNewGridInput() {
 let input = 16;
 
 createGrid();
-
 colorGrid();
 
 let clearButton = document.querySelector(".button");
 
 clearButton.addEventListener("click", () => {
-    
     getNewGridInput();
-
     clearGrid();
-
     createGrid();
-
     colorGrid();
 });
