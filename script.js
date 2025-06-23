@@ -1,12 +1,16 @@
 function createGrid() {
     let divContainer = document.querySelector(".container");
 
-    for (i = 1; i <= input; i++) {
-     let newDiv = document.createElement("div");
-     newDiv.setAttribute("class", "square");
-     divContainer.appendChild(newDiv);
-    }
-}
+    let squareSize = 500 / input;
+
+    for (let i = 0; i < input * input; i++) {
+        let newDiv = document.createElement("div");
+        newDiv.setAttribute("class", "square");
+        newDiv.style.width = `${squareSize}px`;
+        newDiv.style.height = `${squareSize}px`;
+        divContainer.appendChild(newDiv);
+            }
+        }
 
 function clearGrid() {
     let allSquares = document.getElementsByClassName('square');
@@ -35,7 +39,7 @@ function getNewGridInput() {
     }
 }
 
-let input = 256;
+let input = 16;
 
 createGrid();
 
