@@ -19,6 +19,7 @@ function clearGrid() {
 }
 
 function colorGrid() {
+
     let selectDiv = document.querySelectorAll(".square");
 
     selectDiv.forEach(div => {
@@ -26,7 +27,10 @@ function colorGrid() {
     });
 
     function colorDiv(div) {
-    div.target.style.backgroundColor = "gray";
+    let randNum1 = Math.random() * 255;
+    let randNum2 = Math.random() * 255;
+    let randNum3 = Math.random() * 255;
+    div.target.style.backgroundColor = `rgb(${randNum1},${randNum2},${randNum3})`
     }
 
 }
