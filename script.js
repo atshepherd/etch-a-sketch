@@ -30,6 +30,18 @@ function colorGrid() {
     let randNum1 = Math.random() * 255;
     let randNum2 = Math.random() * 255;
     let randNum3 = Math.random() * 255;
+    
+    let squareOpacity = div.target.style.opacity;
+    let newOpacity;
+
+    if(squareOpacity >= 1) {
+        squareOpacity = 1;
+    }
+    else {
+        newOpacity = +squareOpacity + .1;
+    }
+
+    div.target.style.opacity = newOpacity;
     div.target.style.backgroundColor = `rgb(${randNum1},${randNum2},${randNum3})`
     }
 
